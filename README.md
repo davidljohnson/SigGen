@@ -9,6 +9,14 @@ Before running SigGen, users must ensure the following prerequisites are met:
 - Clone or download this repository to your local machine.
 - Obtain API keys from Anthropic and OpenAI.
 
+## To Do List
+- Local LLM capabilities and improved modularity for different APIs
+- Configuration settings for desired log coverage
+- Add a QA step to check on the quality of the generated Sigma rule
+- Option to mix and match selected procedures to a single Sigma rule (rather that creating seperate ones)
+- Ability to add API keys and manage models via the UI
+- Local storage of created Sigma rules
+
 ## Installation
 1. **API Keys Configuration**:
    - Create a `.env` file in the top-level directory (where the `docker-compose.yml` file resides).
