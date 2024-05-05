@@ -1,0 +1,14 @@
+# Node (for React)
+node_modules/
+.env
+.DS_Store
+
+# Python (for Flask)
+__pycache__/
+*.pyc
+venv/
+.env
+
+# Sigma folder (which should be built dynamically before running the app)
+sigma/
+all_sigma_rules/

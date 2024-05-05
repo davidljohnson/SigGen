@@ -1,0 +1,25 @@
+services:
+  backend:
+    build: ./backend
+    volumes:
+      - ./all_sigma_rules:/app/all_sigma_rules
+    ports:
+      - "5050:5050"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+    networks:
+      - app-network
+      
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - REACT_APP_BACKEND_URL=http://backend:5050
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
